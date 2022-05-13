@@ -12,8 +12,30 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-provider "google" { version = "~> 3.54.0" }
-provider "google-beta" { version = "~> 3.73.0" }
-provider "null" { version = "~> 2.1" }
-provider "random" { version = "~> 2.2" }
+variable "gke_cluster_id" {
+  description = "GKE cluster id"
+}
 
+variable "env" {
+  type = string
+}
+
+variable "gke_cluster_name" {
+  description = "GKE cluster name"
+}
+
+variable "project_id" {
+  description = "GKE cluster name"
+}
+
+variable "git_user" {
+  description = "git user"
+}
+
+variable "git_org" {
+  description = "git org"
+}
+
+variable "acm_repo" {
+  description = "ACM repo name"
+}

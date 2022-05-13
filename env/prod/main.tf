@@ -100,6 +100,17 @@ module "secret-gke-name" {
   group             =  var.group
 }
 
+module "acm" {
+  source                = "../../modules/acm/"
+  gke_cluster_id        = local.gke_cluster_id
+  gke_cluster_name      = module.create_gke_1.cluster_name.name
+  env                   = var.env
+  project_id            = module.create-gcp-project.project.project_id
+  git_user              = var.github_user
+  git_org               = var.github_org
+  acm_repo              = var.acm_repo
+}
+
 //
 //module "secret-github-user" {
 //  source            = "../../modules/secrets/"

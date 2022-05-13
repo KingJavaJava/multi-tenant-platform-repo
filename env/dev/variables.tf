@@ -44,6 +44,9 @@ variable "group_id" {
 variable "folder_id" {
   default = "YOUR_FOLDER_ID"
 }
+variable "acm_repo" {
+  default = "YOUR_ACM_REPO"
+}
 variable "env" {
   default = "dev"
 }

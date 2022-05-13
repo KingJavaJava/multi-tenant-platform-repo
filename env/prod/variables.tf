@@ -28,8 +28,17 @@ variable "org_id" {
   default = "YOUR_ORG_ID"
   description = "GCP org id"
 }
+variable "github_user" {
+  default = "YOUR_GITHUB_USER"
+}
+variable "github_org" {
+  default = "YOUR_GITHUB_ORG"
+}
 variable "folder_id" {
   default = "YOUR_FOLDER_ID"
+}
+variable "acm_repo" {
+  default = "YOUR_ACM_REPO"
 }
 variable "env" {
   default = "prod"

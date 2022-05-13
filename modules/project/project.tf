@@ -16,6 +16,8 @@ module "gcp-project" {
     "containerregistry.googleapis.com",
     "secretmanager.googleapis.com",
     "serviceusage.googleapis.com",
+    "gkehub.googleapis.com",
+    "anthosconfigmanagement.googleapis.com"
 
   ]
 }

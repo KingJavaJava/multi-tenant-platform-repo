@@ -142,7 +142,7 @@ module "secret-gcp-org" {
 
 module "secret-gcp-folder" {
   source            = "../../modules/secrets/"
-  secret            =  var.folder_id
+  secret            = "${var.folder_id == "" ? " " : var.folder_id}"
   secret_id         = "gcp-folder"
   project_id        =  var.project_id
   group             =  var.group
@@ -162,4 +162,15 @@ module "secret-infra-project-id" {
   secret_id         = "infra-project-id"
   project_id        =  var.project_id
   group             =  var.group
+}
+
+module "acm" {
+  source                = "../../modules/acm/"
+  gke_cluster_id        = local.gke_cluster_id
+  gke_cluster_name      = module.create_gke_1.cluster_name.name
+  env                   = var.env
+  project_id            = module.create-gcp-project.project.project_id
+  git_user              = var.github_user
+  git_org               = var.github_org
+  acm_repo              = var.acm_repo
 }

@@ -13,7 +13,7 @@
 # limitations under the License.
 
 provider "google" { version = "~> 3.54.0" }
-provider "google-beta" { version = "~> 3.54.0" }
+provider "google-beta" { version = "~> 3.73.0" }
 provider "null" { version = "~> 2.1" }
 provider "random" { version = "~> 2.2" }
 
